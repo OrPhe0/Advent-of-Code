@@ -29,7 +29,7 @@ foreach ($line in $puzzleinput) {
 Write-Host "Valid passwords part 1: $count" -ForegroundColor Green
 
 
-#Part 2
+#Part 2 bblabla
 $count = $null
 
 foreach ($line2 in $puzzleinput) {
