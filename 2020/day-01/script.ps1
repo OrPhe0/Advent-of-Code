@@ -1,13 +1,13 @@
 $aocyear = 2020
-$aocday = 1
+$aocday = "01"
 
-Write-Host "Initializing Advent of Code Script..." -ForegroundColor Yellow
-Write-Host "The year is: $aocyear" -ForegroundColor Yellow
-Write-Host "We are solving day: $aocday" -ForegroundColor Yellow
+Write-Host "Initializing Advent of Code Script..." -ForegroundColor Blue
+Write-Host "The year is: $aocyear" -ForegroundColor Blue
+Write-Host "We are solving day: $aocday" -ForegroundColor Blue
 
 
 #Part 1 
-[int[]]$puzzleinput = get-content ".\2020\day-01\input.txt"
+[int[]]$puzzleinput = get-content ".\2020\day-$aocday\input.txt"
 $aocanswer = "2020"
 
 $WeAreBreakingShitUp = $false

@@ -1,11 +1,11 @@
 $aocyear = 2020
-$aocday = 2
+$aocday = "02"
 
-Write-Host "Initializing Advent of Code Script..." -ForegroundColor Yellow
-Write-Host "The year is: $aocyear" -ForegroundColor Yellow
-Write-Host "We are solving day: $aocday" -ForegroundColor Yellow
+Write-Host "Initializing Advent of Code Script..." -ForegroundColor Blue
+Write-Host "The year is: $aocyear" -ForegroundColor Blue
+Write-Host "We are solving day: $aocday" -ForegroundColor Blue
 
-$puzzleinput = get-content ".\2020\day-02\input.txt"
+$puzzleinput = get-content ".\2020\day-$aocday\input.txt"
 
 #Part 1
 
@@ -29,7 +29,7 @@ foreach ($line in $puzzleinput) {
 Write-Host "Valid passwords part 1: $count" -ForegroundColor Green
 
 
-#Part 2 bblabla
+#Part 2 
 $count = $null
 
 foreach ($line2 in $puzzleinput) {
