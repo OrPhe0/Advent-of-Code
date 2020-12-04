@@ -7,8 +7,7 @@ Write-Host "We are solving day: $aocday" -ForegroundColor Blue
 
 $puzzleinput = get-content ".\2020\day-$aocday\input.txt"
 
-#Part 1
-
+########## Part 1 ############
 $count = $null
 
 foreach ($line in $puzzleinput) {

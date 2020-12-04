@@ -6,7 +6,7 @@ Write-Host "The year is: $aocyear" -ForegroundColor Blue
 Write-Host "We are solving day: $aocday" -ForegroundColor Blue
 
 
-#Part 1 
+########## Part 1 ############
 [int[]]$puzzleinput = get-content ".\2020\day-$aocday\input.txt"
 $aocanswer = "2020"
 

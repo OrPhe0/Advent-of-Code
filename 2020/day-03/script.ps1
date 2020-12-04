@@ -7,7 +7,7 @@ Write-Host "We are solving day: $aocday" -ForegroundColor Blue
 
 $puzzleinput = get-content ".\2020\day-$aocday\input.txt"
 
-#part 1
+########## Part 1 ############
 $i = 0
 $treesfound = 0
 $tree = '#'
