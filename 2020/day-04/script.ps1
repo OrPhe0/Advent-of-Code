@@ -101,7 +101,7 @@ foreach ($passport in $passports) {
             if ($field -match "hcl") {
                 $field = $field -replace "hcl:",""
                 write-host "Checking hcl: $field"
-                if ($field -match "#[a-fA-F0-9]{6}") {
+                if ($field -match "#[a-fA-F0-9]{6}$") {
                     $validfield += $true
                     write-host "hcl verified" -ForegroundColor Green
                 }
@@ -125,7 +125,11 @@ foreach ($passport in $passports) {
             if ($field -match "pid") {
                 $field = $field -replace "pid:",""
                 write-host "Checking pid: $field"
-                if ($field -match "\d{9}") {
+                if ($field -match "\d{9}$") {
+                    if ($field -eq "000000000") {
+                        write-host "fuck you"
+                        $validfield += $false
+                    }
                     $validfield += $true
                     write-host "pid verified" -ForegroundColor Green
                 }  
@@ -158,9 +162,6 @@ foreach ($passport in $passports) {
     }
     $i++
 }
-
-$verifiedinvalidpassports = $verifiedinvalidpassports+1
-$verifiedvalidpassports = $verifiedvalidpassports-1
 
 Write-Host "Valid passports: $validpassports" -ForegroundColor Green
 Write-Host "Invalid passports $invalidpassports" -ForegroundColor Green
